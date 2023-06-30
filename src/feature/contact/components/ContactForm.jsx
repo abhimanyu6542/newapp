@@ -30,8 +30,8 @@ const ContactForm = () => {
     resolver: yupResolver(contactSchema),
   });
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async () => {
+   
     emailjs.sendForm('service_inc6hen', 'template_54e7hic', form.current, 'XJV8d4STHzCM6o-CZ').then(
       (result) => {
         console.log(result.text);
